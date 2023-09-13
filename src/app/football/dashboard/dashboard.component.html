@@ -1,2 +1,2 @@
 <app-button *ngFor="let country of listOfCountries" [country]="country" (buttonClick)="onSelect($event)"></app-button>
-<app-league-standings [country]="selectedCountry"></app-league-standings>
+<app-league-standings *ngIf="selectedCountry" [country]="selectedCountry"></app-league-standings>

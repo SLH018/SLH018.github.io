@@ -1,11 +1,11 @@
 import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { LowerCasePipe } from '@angular/common';
 import { MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-button',
   standalone: true,
-  imports: [CommonModule, MatButtonModule],
+  imports: [LowerCasePipe, MatButtonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],

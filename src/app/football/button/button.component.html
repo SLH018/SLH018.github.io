@@ -1,2 +1,2 @@
-    <button mat-raised-button (click)="onButtonClick()">{{country}}</button>
+    <button [attr.id]="country | lowercase" mat-raised-button (click)="onButtonClick()">{{country}}</button>
    
