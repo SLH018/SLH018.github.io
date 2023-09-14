@@ -39,11 +39,11 @@ export interface Standing {
     group:       string;
     form:        string;
     status:      string;
-    description: string;
+    description: string | null;
     all:         All;
     home:        All;
     away:        All;
-    update:      Date;
+    update:      string;
 }
 
 export interface All {

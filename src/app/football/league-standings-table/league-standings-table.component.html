@@ -1,0 +1,28 @@
+<table>
+    <thead>
+    <tr>
+        <th></th>
+        <th></th>
+        <th>Name</th>
+        <th>Games</th>
+        <th>W</th>
+        <th>L</th>
+        <th>D</th>
+        <th>Goal Difference</th>
+        <th>Points</th>    
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let stand of leagueStandings$ | async">
+        <td>{{stand.rank}}</td>
+        <td><img width="20" height="20" [src]=stand.team.logo></td>
+        <td data-label="Name">{{stand.team.name}}</td>
+        <td>{{stand.all.played}}</td>
+        <td>{{stand.all.win}}</td>
+        <td>{{stand.all.lose}}</td>
+        <td>{{stand.all.draw}}</td>
+        <td>{{stand.goalsDiff}}</td>
+        <td>{{stand.points}}</td>
+    </tr>
+    </tbody>
+</table>

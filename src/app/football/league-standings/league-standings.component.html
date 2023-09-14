@@ -1,2 +1,3 @@
 <p>{{country}} Selected</p>
-<div *ngIf="leagueStandings$ | async; let leagueData">{{leagueData.response | json}}</div>
+<app-league-standings-table [leagueStandings$] = "leagueStandings$"></app-league-standings-table>
+
