@@ -11,7 +11,7 @@ import { MatButtonModule} from '@angular/material/button';
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-  @Input() public country: string | undefined;
+  @Input() public country!: string;
   @Output() public buttonClick = new EventEmitter<string>();
 
   public onButtonClick() {

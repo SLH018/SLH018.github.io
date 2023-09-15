@@ -15,7 +15,7 @@
     <tbody>
     <tr *ngFor="let stand of leagueStandings$ | async">
         <td>{{stand.rank}}</td>
-        <td><img width="20" height="20" [src]=stand.team.logo></td>
+        <td><img width="20" height="20"[src]=stand.team.logo></td>
         <td data-label="Name">{{stand.team.name}}</td>
         <td>{{stand.all.played}}</td>
         <td>{{stand.all.win}}</td>
