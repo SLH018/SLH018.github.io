@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 import { Response } from 'src/app/models/last-ten-game-results.model';
@@ -8,6 +8,7 @@ import { Response } from 'src/app/models/last-ten-game-results.model';
   selector: 'app-last-ten-games-results-table',
   standalone: true,
   imports: [CommonModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './last-ten-games-results-table.component.html',
   styleUrls: ['./last-ten-games-results-table.component.scss'],
 })
