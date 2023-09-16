@@ -1,7 +1,6 @@
 import { UpperCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
 @Component({
   standalone: true,
   imports: [UpperCasePipe, RouterModule],
@@ -9,6 +8,4 @@ import { RouterModule } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'football updates';
-}
+export class AppComponent {}

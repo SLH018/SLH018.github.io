@@ -16,10 +16,10 @@ import { Country } from 'src/app/models/country.model';
 export class DashboardComponent {
   public listOfCountries: Country[] = ["England", "Spain", "Germany", "France", "Italy"];
   public selectedCountry?: Country |string;
+  title = 'football updates';
   public leagueIds: number[] | undefined;
 
-  constructor(private leagueStandings:LeagueStandingsService,
-    private leagueService: LeaguesService) {}
+  constructor(private leagueStandings:LeagueStandingsService, private leagueService: LeaguesService) {}
 
   public onSelect(country: string){
     this.selectedCountry = country;

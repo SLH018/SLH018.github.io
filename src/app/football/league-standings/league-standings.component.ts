@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { LeagueStandingsTableComponent } from '../league-standings-table/league-standings-table.component';
 import { CountryConstant } from 'src/app/constants/country.constant';
 import { Country } from 'src/app/models/country.model';
+import { LastTenGamesService } from 'src/app/core/last-ten-games.service';
 
 @Component({
   selector: 'app-league-standings',
@@ -24,7 +25,8 @@ export class LeagueStandingsComponent implements OnChanges{
 
   ngOnChanges(){
     this.leagueStandings$ = this.leagueStandings.getLeagueStandings(this.country as Country);
-    this.leaguesService.getLeagueDetails(this.country as Country).subscribe();
+    //this.leaguesService.getLeagueDetails(this.country as Country).subscribe();
+
   }
 
 

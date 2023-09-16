@@ -53,8 +53,8 @@ export interface Venue {
 }
 
 export interface Goals {
-    home: AwayClass | number | null;
-    away: AwayClass | number | null;
+    home: AwayClass;
+    away: AwayClass;
 }
 
 export interface AwayClass {

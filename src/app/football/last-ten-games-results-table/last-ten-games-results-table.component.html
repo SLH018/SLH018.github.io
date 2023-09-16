@@ -1,0 +1,13 @@
+<table>
+    <tbody>
+    <tr *ngFor="let game of lastTenGamesResults$ | async">
+        <td><img width="20" height="20"[src]=game.teams.home.logo></td>
+        <td>{{game.teams.home.name}}</td>
+        <td>{{game.score.fulltime.home}}</td>
+        <td>-</td>
+        <td>{{game.score.fulltime.away}}</td>
+        <td>{{game.teams.away.name}}</td>
+        <td><img width="20" height="20"[src]=game.teams.away.logo></td>
+    </tr>
+    </tbody>
+</table>

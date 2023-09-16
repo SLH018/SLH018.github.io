@@ -11,10 +11,10 @@ import { MatButtonModule} from '@angular/material/button';
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-  @Input() public country!: string;
+  @Input() public buttonName!: string;
   @Output() public buttonClick = new EventEmitter<string>();
 
   public onButtonClick() {
-  this.buttonClick.emit(this.country)
+  this.buttonClick.emit(this.buttonName)
   }
 }

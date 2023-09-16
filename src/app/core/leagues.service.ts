@@ -14,7 +14,7 @@ export class LeaguesService {
   id: number | undefined;
   league: League | undefined;
   url = ServicesConstants.BaseUrl;
-  urlLeagues = 'https://v3.football.api-sports.io/leagues?country=england'
+  //urlLeagues = 'https://v3.football.api-sports.io/leagues?country=england'
   headers= new HttpHeaders()
   .set('x-apisports-key', ServicesConstants.AppId);
 
