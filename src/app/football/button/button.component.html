@@ -1,2 +1,2 @@
-    <button [attr.id]="buttonName | lowercase" mat-raised-button (click)="onButtonClick()">{{buttonName}}</button>
+    <button [attr.id]="buttonName | lowercase | appendPipe: 'Select'" mat-raised-button (click)="onButtonClick()">{{buttonName}}</button>
    

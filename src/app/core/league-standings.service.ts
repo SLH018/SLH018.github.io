@@ -17,9 +17,9 @@ export class LeagueStandingsService {
 
   constructor(private httpClient: HttpClient) {}
 
-   getLeagueStandings(country: Country): Observable<Standing[]> {
-     return this.httpClient.get<LeagueStandings>(ServicesConstants.BaseUrl+'standings?league='+LeagueCode[country]+'&season=2023', { 'headers': this.headers }).pipe(
-      map((data=> this.standings = data.response[0].league.standings[0])),   
+   getLeagueStandings(country: Country, season: string | Number): Observable<Standing[]> {
+    return this.httpClient.get<LeagueStandings>(ServicesConstants.BaseUrl+'standings?league='+LeagueCode[country]+`&season=${season}`, { 'headers': this.headers }).pipe(
+    map((data=> this.standings = data.response[0].league.standings[0])),   
     )
   }
   }

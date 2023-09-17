@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../button/button.component';
 import { LeagueStandingsComponent } from '../league-standings/league-standings.component';
-import { LeagueStandingsService } from 'src/app/core/league-standings.service';
-import { LeaguesService } from 'src/app/core/leagues.service';
 import { Country } from 'src/app/models/country.model';
 import { LocalStorageService } from 'src/app/shared/local-storage.service';
 
@@ -17,13 +15,10 @@ import { LocalStorageService } from 'src/app/shared/local-storage.service';
 export class DashboardComponent implements OnInit{
   public listOfCountries: Country[] = ["England", "Spain", "Germany", "France", "Italy"];
   public selectedCountry?: Country |string;
-  title = 'football updates';
+  public title = 'football updates';
   public leagueIds: number[] | undefined;
 
-  constructor(
-    private leagueStandings:LeagueStandingsService, 
-    private leagueService: LeaguesService,
-    private localStorageService: LocalStorageService) {}
+  constructor(private localStorageService: LocalStorageService) {}
 
   ngOnInit(){
     const storedSelectedCountry = this.localStorageService.getItem('selectedCountry');
