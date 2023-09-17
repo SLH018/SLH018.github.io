@@ -13,11 +13,10 @@ import { LocalStorageService } from 'src/app/shared/local-storage.service';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit{
-  public listOfCountries: Country[] = ["England", "Spain", "Germany", "France", "Italy"];
-  public selectedCountry?: Country |string;
-  public title = 'football updates';
-  public leagueIds: number[] | undefined;
-
+  listOfCountries: Country[] = ["England", "Spain", "Germany", "France", "Italy"];
+  selectedCountry?: Country | string;
+  title = 'football updates';
+  
   constructor(private localStorageService: LocalStorageService) {}
 
   ngOnInit(){
@@ -27,7 +26,7 @@ export class DashboardComponent implements OnInit{
     }
   }
 
-  public onSelect(country: string){
+  onSelect(country: string){
     this.selectedCountry = country;
     this.localStorageService.setItem('selectedCountry',this.selectedCountry);
   }

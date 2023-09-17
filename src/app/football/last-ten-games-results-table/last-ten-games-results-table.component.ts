@@ -13,6 +13,6 @@ import { Response } from 'src/app/models/last-ten-game-results.model';
   styleUrls: ['./last-ten-games-results-table.component.scss'],
 })
 export class LastTenGamesResultsTableComponent {
-  @Input() public lastTenGamesResults$: Observable<Response[]> | undefined;
+  @Input() lastTenGamesResults$: Observable<Response[]> | undefined;
 
 }

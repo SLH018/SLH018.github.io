@@ -11,9 +11,10 @@ import { LeagueCode } from '../constants/country.constant';
 })
 export class LeagueStandingsService {
 
-  public standings: Standing[] | undefined;
   headers= new HttpHeaders()
   .set('x-apisports-key', ServicesConstants.AppId);
+  standings: Standing[] | undefined;
+
 
   constructor(private httpClient: HttpClient) {}
 

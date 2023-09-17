@@ -17,9 +17,8 @@ import { Country } from 'src/app/models/country.model';
 export class LeagueStandingsComponent implements OnChanges{
 
   @Input() country!: string;
-  public leagueEndDate!: Date;
-  public leagueStandings$!: Observable<Standing[]>;
-  public season!: string | Number;
+  leagueStandings$!: Observable<Standing[]>;
+  season!: string | Number;
 
   constructor(private leagueStandings: LeagueStandingsService, private leaguesService: LeaguesService) {}
 

@@ -17,8 +17,8 @@ import { LastTenGamesResultsTableComponent } from '../last-ten-games-results-tab
 })
 export class LastTenGamesResultsComponent implements OnInit{
 
+  lastTenGamesResults$!: Observable<Response[]>;
   teamId!: number;
-  public lastTenGamesResults$!: Observable<Response[]>;
 
   constructor(private location: Location, private route: ActivatedRoute, private lastTenGames: LastTenGamesService){}
 

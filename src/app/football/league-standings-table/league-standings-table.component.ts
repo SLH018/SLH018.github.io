@@ -13,5 +13,5 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./league-standings-table.component.scss'],
 })
 export class LeagueStandingsTableComponent {
-  @Input() public leagueStandings$: Observable<Standing[]> | undefined;
+  @Input() leagueStandings$: Observable<Standing[]> | undefined;
 }

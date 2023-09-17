@@ -14,8 +14,6 @@ export class LocalStorageService {
     if(data !== null) {
       return data;
     } 
-
     return undefined;
   }
-
 }

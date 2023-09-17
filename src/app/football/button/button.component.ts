@@ -12,8 +12,8 @@ import { AppendPipeModule } from 'src/app/shared/append.pipe';
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-  @Input() public buttonName!: string;
-  @Output() public buttonClick = new EventEmitter<string>();
+  @Input() buttonName!: string;
+  @Output() buttonClick = new EventEmitter<string>();
 
   public onButtonClick() {
   this.buttonClick.emit(this.buttonName)
