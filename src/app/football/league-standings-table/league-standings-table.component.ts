@@ -14,7 +14,4 @@ import { RouterLink } from '@angular/router';
 })
 export class LeagueStandingsTableComponent {
   @Input() public leagueStandings$: Observable<Standing[]> | undefined;
-
-
- 
 }
