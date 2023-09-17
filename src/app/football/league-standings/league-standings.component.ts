@@ -6,6 +6,7 @@ import { Standing } from 'src/app/models/league-standing.model';
 import { Observable, concatMap, map } from 'rxjs';
 import { LeagueStandingsTableComponent } from '../league-standings-table/league-standings-table.component';
 import { Country } from 'src/app/models/country.model';
+
 @Component({
   selector: 'app-league-standings',
   standalone: true,
