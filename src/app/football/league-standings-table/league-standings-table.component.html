@@ -16,7 +16,7 @@
     <tr *ngFor="let stand of leagueStandings$ | async">
         <td>{{stand.rank}}</td>
         <td><img width="20" height="20"[src]=stand.team.logo></td>
-        <td data-label="Name" [routerLink]="['/lastTen', stand.team.id]">{{stand.team.name}}</td> 
+        <td data-label="Name" appHighlight [routerLink]="['/lastTen', stand.team.id]">{{stand.team.name}}</td> 
         <td>{{stand.all.played}}</td>
         <td>{{stand.all.win}}</td>
         <td>{{stand.all.lose}}</td>
