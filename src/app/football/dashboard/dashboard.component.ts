@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../button/button.component';
 import { LeagueStandingsComponent } from '../league-standings/league-standings.component';
 import { Country } from 'src/app/models/country.model';
-import { LocalStorageService } from 'src/app/shared/local-storage.service';
+import { SessionStorageService } from 'src/app/shared/session-storage.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,10 +17,10 @@ export class DashboardComponent implements OnInit{
   selectedCountry?: Country | string;
   title: string = 'football updates';
   
-  constructor(private localStorageService: LocalStorageService) {}
+  constructor(private sessionStorageService: SessionStorageService) {}
 
   ngOnInit(){
-    const storedSelectedCountry = this.localStorageService.getItem('selectedCountry');
+    const storedSelectedCountry = this.sessionStorageService.getItem('selectedCountry');
     if(storedSelectedCountry){
       this.selectedCountry = storedSelectedCountry;
     }
@@ -28,6 +28,6 @@ export class DashboardComponent implements OnInit{
 
   onSelect(country: string){
     this.selectedCountry = country;
-    this.localStorageService.setItem('selectedCountry',this.selectedCountry);
+    this.sessionStorageService.setItem('selectedCountry',this.selectedCountry);
   }
 }

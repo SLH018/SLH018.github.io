@@ -3,14 +3,14 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class LocalStorageService {
+export class SessionStorageService {
 
   setItem(key: string, value: string): void {
-    localStorage.setItem(key, value)
+    sessionStorage.setItem(key, value)
   }
 
   getItem(key: string): string | undefined {
-    const data: string | null = localStorage.getItem(key);
+    const data: string | null = sessionStorage.getItem(key);
     if(data !== null) {
       return data;
     } 
