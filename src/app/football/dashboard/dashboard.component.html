@@ -1,4 +1,6 @@
 <h1>{{title | uppercase}}</h1> 
-<app-button *ngFor="let country of listOfCountries" [buttonName]="country" (buttonClick)="onSelect($event)"></app-button>
+<div class="button-container">
+    <app-button *ngFor="let country of listOfCountries" [buttonName]="country" (buttonClick)="onSelect($event)"></app-button>
+</div>
 <app-league-standings *ngIf="selectedCountry" [country]="selectedCountry"></app-league-standings>
 
