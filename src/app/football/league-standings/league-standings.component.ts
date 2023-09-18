@@ -20,7 +20,7 @@ export class LeagueStandingsComponent implements OnChanges{
   leagueStandings$!: Observable<Standing[]>;
   season!: string | Number;
 
-  constructor(private leagueStandings: LeagueStandingsService, private leaguesService: LeaguesService) {}
+  constructor(public leagueStandings: LeagueStandingsService, private leaguesService: LeaguesService) {}
 
   ngOnChanges(){
     this.leagueStandings$ = this.leaguesService.getSeasonEndDate(this.country as Country).pipe(

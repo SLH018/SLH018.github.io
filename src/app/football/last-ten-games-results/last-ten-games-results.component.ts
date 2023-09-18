@@ -20,7 +20,7 @@ export class LastTenGamesResultsComponent implements OnInit{
   lastTenGamesResults$!: Observable<Response[]>;
   teamId!: number;
 
-  constructor(private location: Location, private route: ActivatedRoute, private lastTenGames: LastTenGamesService){}
+  constructor(private location: Location, private route: ActivatedRoute, public lastTenGames: LastTenGamesService){}
 
   ngOnInit() {
     this.teamId = Number(this.route.snapshot.paramMap.get('teamId')); 
