@@ -1,7 +1,7 @@
 export interface LeagueStandings {
     get:        string;
     parameters: Parameters;
-    errors:     any[];
+    errors:     [];
     results:    number;
     paging:     Paging;
     response:   Response[];

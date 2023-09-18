@@ -15,7 +15,7 @@ import { LocalStorageService } from 'src/app/shared/local-storage.service';
 export class DashboardComponent implements OnInit{
   listOfCountries: Country[] = ["England", "Spain", "Germany", "France", "Italy"];
   selectedCountry?: Country | string;
-  title = 'football updates';
+  title: string = 'football updates';
   
   constructor(private localStorageService: LocalStorageService) {}
 

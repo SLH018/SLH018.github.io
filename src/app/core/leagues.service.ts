@@ -10,15 +10,14 @@ import { Country } from '../models/country.model';
   providedIn: 'root'
 })
 export class LeaguesService {
-  headers= new HttpHeaders()
+  headers: HttpHeaders = new HttpHeaders()
   .set('x-apisports-key', ServicesConstants.AppId);
   
   constructor(private httpClient: HttpClient) {}
 
-  getLeagueDetails(country: Country): Observable<Date> {
+  getSeasonEndDate(country: Country): Observable<Date> {
     return this.httpClient.get<Leagues>(ServicesConstants.BaseUrl+'leagues?id='+LeagueCode[country]+`&country=${country}`+'&current=true', { 'headers': this.headers }).
     pipe(map(result => result.response[0].seasons[0].end),
-    tap(date => console.log(date)),
     catchError((err) => this.handleError(err))
     )
   }  

@@ -23,7 +23,7 @@ export class LeagueStandingsComponent implements OnChanges{
   constructor(private leagueStandings: LeagueStandingsService, private leaguesService: LeaguesService) {}
 
   ngOnChanges(){
-    this.leagueStandings$ = this.leaguesService.getLeagueDetails(this.country as Country).pipe(
+    this.leagueStandings$ = this.leaguesService.getSeasonEndDate(this.country as Country).pipe(
       map(result  => this.getSeason(result)),
       ).pipe(
       concatMap(season => this.leagueStandings.getLeagueStandings(this.country as Country, season)

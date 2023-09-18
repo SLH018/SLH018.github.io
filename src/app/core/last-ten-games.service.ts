@@ -8,7 +8,7 @@ import { LastTenGameResults, Response } from '../models/last-ten-game-results.mo
   providedIn: 'root'
 })
 export class LastTenGamesService {
-  headers= new HttpHeaders()
+  headers: HttpHeaders = new HttpHeaders()
   .set('x-apisports-key', ServicesConstants.AppId);
 
 
